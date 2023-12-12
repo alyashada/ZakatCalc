@@ -83,38 +83,27 @@
         app:layout_constraintTop_toBottomOf="@id/textGroup" />
 
     <TextView
-        android:id="@+id/textAboutZakat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Zakat Calculator"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
-
-    <TextView
         android:id="@+id/textWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to Zakat Calculator App"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintVertical_bias="0.176" />
 
     <TextView
         android:id="@+id/textdetail"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="94dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="The Zakat Calculator is a simple yet powerful tool designed to help you calculate Zakat, an essential pillar of Islam. This application provides a convenient way to determine your Zakat obligations based on your gold assets. "
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,7 +111,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.263" />
 
     <TextView
         android:id="@+id/textView4"
