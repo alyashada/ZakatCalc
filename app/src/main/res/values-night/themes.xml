@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.ZakatApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your colors for dark mode -->
+        <!-- Customize colors for dark mode -->
         <item name="colorPrimary">@color/dark_color_primary</item>
         <item name="colorPrimaryDark">@color/dark_color_primary_dark</item>
         <item name="colorAccent">@color/dark_color_accent</item>
-        <!-- Add more customizations as needed -->
+
     </style>
 </resources>

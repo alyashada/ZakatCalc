@@ -20,7 +20,7 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true">
-            <!-- Intent filter for LAUNCHER activity -->
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -30,7 +30,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!-- No need for LAUNCHER intent filter here -->
+
         </activity>
 
     </application>
