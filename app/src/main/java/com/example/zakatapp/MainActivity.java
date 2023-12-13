@@ -49,6 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCalc.setOnClickListener(this);
         btnClear.setOnClickListener(this);
 
+        // Set the visibility of the output views and labels to GONE initially
+        findViewById(R.id.labelTotalValue).setVisibility(View.GONE);
+        findViewById(R.id.totalValueTextView).setVisibility(View.GONE);
+        findViewById(R.id.labelZakatValue).setVisibility(View.GONE);
+        findViewById(R.id.zakatValueTextView).setVisibility(View.GONE);
+        findViewById(R.id.labelZakatAmount).setVisibility(View.GONE);
+        findViewById(R.id.zakatAmountTextView).setVisibility(View.GONE);
+
         getSupportActionBar().setTitle("Zakat Calculator");
     }
 
@@ -119,14 +127,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         zakatAmountTextView.setText(String.format("%.2f", zakatAmount));
     }
 
-
     private void clearFields() {
         goldWeightEditText.setText("");
         goldValueEditText.setText("");
         goldTypeRadioGroup.clearCheck();
-        totalValueTextView.setText("");
-        zakatValueTextView.setText("");
-        zakatAmountTextView.setText("");
+
+        // Set the visibility of the output views and labels to GONE
+        findViewById(R.id.labelTotalValue).setVisibility(View.GONE);
+        findViewById(R.id.totalValueTextView).setVisibility(View.GONE);
+        findViewById(R.id.labelZakatValue).setVisibility(View.GONE);
+        findViewById(R.id.zakatValueTextView).setVisibility(View.GONE);
+        findViewById(R.id.labelZakatAmount).setVisibility(View.GONE);
+        findViewById(R.id.zakatAmountTextView).setVisibility(View.GONE);
     }
 
     @Override
