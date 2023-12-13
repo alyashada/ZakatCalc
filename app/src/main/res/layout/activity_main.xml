@@ -110,27 +110,28 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/radiogroup_bg"
         android:orientation="horizontal"
+        android:contentDescription="Select gold type (Keep or Wear)"
         app:layout_constraintTop_toBottomOf="@+id/labelGoldType"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-    <RadioButton
-        android:id="@+id/radio_keep"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Keep"
-        android:buttonTint="@color/accent_color" />
+        <!-- RadioButtons  -->
+        <RadioButton
+            android:id="@+id/radio_keep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Keep"
+            android:buttonTint="@color/accent_color" />
 
-    <RadioButton
-        android:id="@+id/radio_wear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Wear"
-        android:buttonTint="@color/accent_color" />
-</RadioGroup>
-
+        <RadioButton
+            android:id="@+id/radio_wear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wear"
+            android:buttonTint="@color/accent_color" />
+    </RadioGroup>
 
     <!-- Total Value -->
     <TextView

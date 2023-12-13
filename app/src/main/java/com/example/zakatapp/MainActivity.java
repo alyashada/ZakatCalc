@@ -57,6 +57,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.labelZakatAmount).setVisibility(View.GONE);
         findViewById(R.id.zakatAmountTextView).setVisibility(View.GONE);
 
+        // Set the hint for goldTypeRadioGroup
+        goldTypeRadioGroup.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(MainActivity.this, "Select gold type (Keep or Wear)", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
+
         getSupportActionBar().setTitle("Zakat Calculator");
     }
 
@@ -94,6 +103,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
+        // Check if gold weight is not a valid number
+        try {
+            double goldWeight = Double.parseDouble(goldWeightEditText.getText().toString());
+            if (goldWeight <= 0) {
+                // Display a message to the user that gold weight must be greater than 0
+                Toast.makeText(this, "Please enter a valid gold weight greater than 0.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        } catch (NumberFormatException e) {
+            // Display a message to the user that gold weight must be a valid number
+            Toast.makeText(this, "Please enter a valid number for gold weight.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Check if current gold value is not a valid number
+        try {
+            double goldValue = Double.parseDouble(goldValueEditText.getText().toString());
+            if (goldValue <= 0) {
+                // Display a message to the user that current gold value must be greater than 0
+                Toast.makeText(this, "Please enter a valid current gold value greater than 0.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        } catch (NumberFormatException e) {
+            // Display a message to the user that current gold value must be a valid number
+            Toast.makeText(this, "Please enter a valid number for current gold value.", Toast.LENGTH_SHORT).show();
+            return;
+        }
         // Check if gold type is not selected
         if (goldTypeRadioGroup.getCheckedRadioButtonId() == -1) {
             // Display a message to the user to select gold type
